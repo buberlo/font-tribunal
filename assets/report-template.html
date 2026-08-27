@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="generator" content="typography-evidence-tool">
+  <title>{{title}} — Typography Evidence Report</title>
+  <link rel="stylesheet" href="report.css">
+  <script src="report.js" defer></script>
+</head>
+<body>
+  <div class="courtroom-report">
+    <header class="report-header">
+      <div class="case-caption">
+        <p class="court">Exhibit {{exhibitId}}</p>
+        <h1>Typography Accessibility Evidence</h1>
+        <p class="case-number">Case No. {{caseNumber}}</p>
+        <p class="generated">Generated {{generatedAt}}</p>
+      </div>
+      <div class="case-summary">
+        <dl>
+          <dt>Source</dt>
+          <dd>{{sourceType}}: {{sourceValue}}</dd>
+          <dt>Overall Score</dt>
+          <dd>{{overallScore}}</dd>
+          <dt>Verdict</dt>
+          <dd>{{verdict}}</dd>
+        </dl>
+      </div>
+    </header>
+
+    <main>
+      <nav class="tabs" role="tablist" aria-label="Report sections">
+        <button class="tab is-active" data-tab="summary" role="tab" aria-selected="true">Summary</button>
+        <button class="tab" data-tab="evidence" role="tab" aria-selected="false">Evidence</button>
+        <button class="tab" data-tab="findings" role="tab" aria-selected="false">Findings</button>
+        <button class="tab" data-tab="replacements" role="tab" aria-selected="false">Replacements</button>
+        <button class="tab" data-tab="citations" role="tab" aria-selected="false">Citations</button>
+        <button class="tab" data-tab="mockups" role="tab" aria-selected="false">Mockups</button>
+        <button class="print-button" type="button">Print</button>
+      </nav>

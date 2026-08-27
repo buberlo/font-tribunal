@@ -1,0 +1,52 @@
+{
+  "name": "typography-evidence",
+  "version": "1.0.0",
+  "description": "Local Node.js tool that captures screenshots and DOM exports, analyzes typography with OpenCV, scores accessibility, and generates a courtroom-style report.",
+  "private": true,
+  "type": "commonjs",
+  "main": "src/index.js",
+  "bin": {
+    "typography-evidence": "src/cli.js"
+  },
+  "files": [
+    "src",
+    "assets",
+    "examples"
+  ],
+  "scripts": {
+    "start": "node src/cli.js",
+    "cli": "node src/cli.js",
+    "sample": "node src/cli.js examples/sample.html --out reports/sample",
+    "test": "node test/pipeline.test.js",
+    "test:sample": "node test/pipeline.test.js",
+    "clean": "node -e \"require('fs').rmSync('reports', { recursive: true, force: true })\""
+  },
+  "keywords": [
+    "typography",
+    "accessibility",
+    "opencv",
+    "screenshot",
+    "dom",
+    "report",
+    "evidence",
+    "wcag",
+    "font-analysis"
+  ],
+  "author": "Local Typography Evidence Team",
+  "license": "MIT",
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "os": [
+    "linux",
+    "darwin",
+    "win32"
+  ],
+  "dependencies": {
+    "commander": "^12.1.0",
+    "file-type": "^16.5.4",
+    "handlebars": "^4.7.8",
+    "jsdom": "^24.1.0",
+    "opencv4nodejs": "^5.6.0",
+    "puppeteer": "^22.0.0"
+  },
